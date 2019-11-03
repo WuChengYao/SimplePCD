@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -5,6 +6,7 @@
 
 body {
   margin: 0;
+  font-family: 'Times New Roman', '微軟正黑體', Times, serif;
 }
 
 .container_1 {
@@ -29,6 +31,14 @@ body {
 .container_2 {
   width: 50%;
   margin: 0 auto;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 550px) {
+  .container_2 {
+    width: 100%;
+    font-size: 16px;
+  }
 }
 
 .container_2 .section {
