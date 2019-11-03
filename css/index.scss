@@ -11,6 +11,9 @@ body {
 .container_1 {
     width: 50%;
     margin: 0 auto;
+    @media screen and(max-width:550px) {
+        font-size: 20px;
+    }
 
     main {
         p {

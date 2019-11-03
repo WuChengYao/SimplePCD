@@ -7,15 +7,16 @@ oSubmit.onclick = function () {
     if (((y_number % 400) == 0) || ((y_number % 100) > 0 || (y_number % 100) < 0) && ((y_number % 4) == 0)) {
         odArray[1] = 29;
     }
-    function isLeapYear(y_number) { 
+
+    function isLeapYear(y_number) {
         var result;
 
         if (y_number % 400 == 0) {
-            result = true; 
+            result = true;
         } else if (y_number % 100 == 0) {
             result = false;
         } else if (y_number % 4 == 0) {
-            result = true; 
+            result = true;
         } else {
             result = false;
         }
@@ -25,7 +26,7 @@ oSubmit.onclick = function () {
     var n_100 = parseInt(((y_number - 1) / 100));
     var n_400 = parseInt(((y_number - 1) / 400));
     var ns = n_4 - n_100 + n_400;
-    var n_1 = (y_number - 1) - ns;  
+    var n_1 = (y_number - 1) - ns;
     var OneOne = (y_number + ns) % 7;
     var oOne;
     if (OneOne == 0) {
@@ -33,9 +34,9 @@ oSubmit.onclick = function () {
     } else {
         oOne = OneOne;
     };
-    var aOne = OneOne  
+    var aOne = OneOne
     var aforin = document.querySelector('.container_1');
-    aforin.style.display = 'none';   
+    aforin.style.display = 'none';
     var aforin_2 = document.querySelector('.container_2');
     for (let m = 1; m < omArray.length; m++) {
         const oMonths = omArray[m];
@@ -72,4 +73,9 @@ oSubmit.onclick = function () {
 
     }
 
+}
+var clearValue = document.querySelector('#reset_all');
+var theValue = document.querySelector('#year_number');
+clearValue.onclick = function () {
+    theValue.value = '';
 }
